@@ -55,5 +55,9 @@ playButton.addEventListener('click', function () {
 
         // inseriamo i numeri progressivi all'interno dei quadrati ccreati
         square.append(index+1);
+
+        square.addEventListener('click', function () {
+            this.classList.add('clicked');
+        })
     }
 })
