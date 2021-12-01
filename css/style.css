@@ -1,3 +1,7 @@
+:root {
+  --square-size: 7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -46,8 +50,8 @@ main {
 }
 
 .square {
-    width: calc(100% / 7); 
-    height: calc(100% / 7);
+    width: calc(100% / var(--square-size)); 
+    height: calc(100% / var(--square-size));
     border: 1px solid black;
     display: flex;
     justify-content: center;
