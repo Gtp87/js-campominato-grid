@@ -30,3 +30,31 @@ header {
     margin-left: 0.6em;
     margin-right: 1em;
 }
+
+main {
+    height: calc(100vh - 100px);
+    background-color: #7FFFD4;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 6em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: calc(100% / 7); 
+    height: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square.clicked {
+    background-color: #6495ED;
+    color: white;
+}
