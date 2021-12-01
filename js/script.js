@@ -53,9 +53,11 @@ playButton.addEventListener('click', function () {
         square.style.height = `calc(100% / ${row})`;
         containerGrid.append(square);
 
-        // inseriamo i numeri progressivi all'interno dei quadrati ccreati
+        // inseriamo i numeri progressivi all'interno dei quadrati creati
         square.append(index+1);
 
+
+        // cambio colore al click di un quadrato
         square.addEventListener('click', function () {
             this.classList.add('clicked');
         })
