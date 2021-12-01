@@ -10,4 +10,50 @@
 // Di cosa ho bisogno per generare i numeri ?
 //     Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli in un secondo momento.
-console.log('ciao sono uno script funzionante');
+
+
+// selezioniamo pulsante play 
+
+
+const playButton = document.getElementById('play');
+let containerGrid = document.getElementById('grid');
+
+// evento click play
+
+playButton.addEventListener('click', function () {
+    containerGrid.innerHTML = '';
+    // che livello ha selezionato il giocatore?
+    let difficulty = document.getElementById('choose-level').value;
+    
+    // generiamo griglia
+    let row = 0;
+    let column = 0;
+
+    // SE difficile
+    if (difficulty == 'hard') {
+        row = 7;
+        column = 7;
+        
+        // SE media
+    } else if (difficulty == 'medium') {
+        row = 9;
+        column = 9;
+   
+        // SE facile
+    } else {
+        row = 10;
+        column = 10;
+    }
+
+    let sqrNumb = row * column;
+    for (let index = 0; index < sqrNumb; index++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.style.width = `calc(100% / ${column})`;
+        square.style.height = `calc(100% / ${row})`;
+        containerGrid.append(square);
+
+        // inseriamo i numeri progressivi all'interno dei quadrati ccreati
+        square.append(index+1);
+    }
+})

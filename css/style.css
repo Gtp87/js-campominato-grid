@@ -50,12 +50,13 @@ main {
 }
 
 .square {
-    width: calc(100% / var(--square-size)); 
-    height: calc(100% / var(--square-size));
+    /* width: calc(100% / var(--square-size)); 
+    height: calc(100% / var(--square-size)); */
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .square.clicked {
